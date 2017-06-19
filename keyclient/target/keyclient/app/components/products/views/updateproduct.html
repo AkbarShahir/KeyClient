@@ -1,0 +1,174 @@
+<div class="clearfix" id="edit-modal-user-views">
+  <div class="modal-header model-grey-color">
+		<button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="cancelModal()"><span aria-hidden="true">×</span></button>
+    <h4 class="modal-title">Edit- {{Product1.product_NAME}}</h4>
+  </div>
+  <div class="modal-body">
+ <form class="form-horizontal" role="form">
+      <div class="form-group">
+            <label class="col-sm-3 control-label">Product ID <sup class="sup-color">*</sup></label>
+
+            <div class="col-sm-8">
+               <input type="text" disabled ng-model="Product1.product_ID" placeholder="Product ID" class="form-control">
+            </div>
+			<span class="help-button" uib-tooltip="Please enter Product ID" tooltip-placement="left">?</span>
+         </div>
+         
+         
+         <div class="form-group">
+            <label class="col-sm-3 control-label">Product Name <sup class="sup-color">*</sup></label>
+
+            <div class="col-sm-8">
+               <input type="text" ng-model="Product1.product_NAME" placeholder="Product Name" class="form-control">
+            </div>
+			<span class="help-button" uib-tooltip="Please enter emp name" tooltip-placement="left">?</span>
+         </div>
+         
+         
+         
+         
+		 <div class="form-group">
+            <label class="col-sm-3 control-label">Product Descr <sup class="sup-color">*</sup></label>
+
+            <div class="col-sm-8">
+               <input type="text" ng-model="Product1.product_DESC" placeholder="Product Desc" class="form-control">
+            </div>
+			<span class="help-button" uib-tooltip="Please enter emp name" tooltip-placement="left">?</span>
+         </div>
+         
+         
+		 <div class="form-group">
+            <label class="col-sm-3 control-label">Supplier ID <sup class="sup-color">*</sup></label>
+
+            <div class="col-sm-8">
+               <input type="text" maxlength="3" ng-model="Product1.supplier_ID" placeholder="Supplier ID" class="form-control">
+            </div>
+			<span class="help-button" uib-tooltip="Please enter Supplier ID" tooltip-placement="left">?</span>
+         </div>
+         
+          <div class="form-group">
+            <label class="col-sm-3 control-label">Product Quantity <sup class="sup-color">*</sup></label>
+
+            <div class="col-sm-8">
+               <input type="number" ng-model="Product1.product_QTY" placeholder="Product Quantity" class="form-control">
+            </div>
+			<span class="help-button" uib-tooltip="Please enter Product Quantity" tooltip-placement="left">?</span>
+         </div>
+         
+          <div class="form-group">
+            <label class="col-sm-3 control-label">Product Size <sup class="sup-color">*</sup></label>
+
+            <div class="col-sm-8">
+               <input type="number" ng-model="Product1.product_SIZE" placeholder="Product Size" class="form-control">
+            </div>
+			<span class="help-button" uib-tooltip="Please enter Product Size" tooltip-placement="left">?</span>
+         </div>
+         
+           <div class="form-group">
+            <label class="col-sm-3 control-label">Note <sup class="sup-color">*</sup></label>
+
+            <div class="col-sm-8">
+               <input type="text" ng-model="Product1.note" placeholder="Product note" class="form-control">
+            </div>
+			<span class="help-button" uib-tooltip="Please enter Product note" tooltip-placement="left">?</span>
+         </div>
+         
+          
+         
+         <!-- <div class="form-group">
+            <label class="col-sm-3 control-label">Product Category <sup class="sup-color">*</sup></label>
+
+            <div class="col-sm-8">
+               <input type="text" ng-model="Product1.product_CATEGORY" placeholder="Product Category" class="form-control">
+            </div>
+			<span class="help-button" uib-tooltip="Please enter Product Category" tooltip-placement="left">?</span>
+         </div> -->
+         
+         
+         <div class="form-group">
+	            <label class="col-sm-3 control-label">Product Category: <sup class="sup-color">*</sup></label>
+	
+	            <div class="col-sm-8">
+	               <input type="text" name="productcategory" id="productcategory" ng-model="productcategory" ng-keyup="complete(productcategory)"  class="form-control"/>
+	               <ul class="list-group" ng-model="hidethis" ng-hide=false>
+		            		<li class="list-group-item" ng-repeat="cat in cats" ng-click="setCategory(cat.CategoryName)">{{cat}}</li>
+		        
+		            </ul>
+	            </div>
+
+				
+	     </div>
+         
+         
+         
+         
+         <div class="form-group">
+            <label class="col-sm-3 control-label">Product Unit Price <sup class="sup-color">*</sup></label>
+
+            <div class="col-sm-8">
+               <input type="number" ng-model="Product1.product_UNITPRICE" placeholder="Product Unit Price" class="form-control">
+            </div>
+			<span class="help-button" uib-tooltip="Please enter Product Unit Price" tooltip-placement="left">?</span>
+         </div>
+         
+         <div class="form-group">
+            <label class="col-sm-3 control-label">Product Sell Price <sup class="sup-color">*</sup></label>
+
+            <div class="col-sm-8">
+               <input type="number" ng-model="Product1.product_SELLPRICE" placeholder="Product Sell Price" class="form-control">
+            </div>
+			<span class="help-button" uib-tooltip="Please enter Product Sell Price" tooltip-placement="left">?</span>
+         </div>
+         
+         <div class="form-group">
+            <label class="col-sm-3 control-label">Product Weight <sup class="sup-color">*</sup></label>
+
+            <div class="col-sm-8">
+               <input type="number" ng-model="Product1.product_WEIGHT" placeholder="Product Weight" class="form-control">
+            </div>
+			<span class="help-button" uib-tooltip="Please enter Product Weight" tooltip-placement="left">?</span>
+         </div>
+         
+         <div class="form-group">
+            <label class="col-sm-3 control-label">Product Discount <sup class="sup-color">*</sup></label>
+
+            <div class="col-sm-8">
+               <input type="number" ng-model="Product1.product_DISCOUNT" placeholder="Product Discount" class="form-control">
+            </div>
+			<span class="help-button" uib-tooltip="Please enter Product Discount" tooltip-placement="left">?</span>
+         </div>
+         
+         <div class="form-group">
+            <label class="col-sm-3 control-label">Units in Stock <sup class="sup-color">*</sup></label>
+
+            <div class="col-sm-8">
+               <input type="number" ng-model="Product1.units_IN_STOCK" placeholder="Units in Stock" class="form-control">
+            </div>
+			<span class="help-button" uib-tooltip="Please enter Units in Stock" tooltip-placement="left">?</span>
+         </div>
+         
+         <div class="form-group">
+            <label class="col-sm-3 control-label">Units Order Supplier <sup class="sup-color">*</sup></label>
+
+            <div class="col-sm-8">
+               <input type="number" ng-model="Product1.units_ORDER_SUPPLIER" placeholder="Units Order Supplier" class="form-control">
+            </div>
+			<span class="help-button" uib-tooltip="Please enter Units Order Supplier" tooltip-placement="left">?</span>
+         </div>
+         <div class="form-group">
+            <label class="col-sm-3 control-label">Product Reorder Level <sup class="sup-color">*</sup></label>
+
+            <div class="col-sm-8">
+               <input type="number" ng-model="Product1.product_REORDER_LEVEL" placeholder="Product Reorder Level" class="form-control">
+            </div>
+			<span class="help-button" uib-tooltip="Please enter Product Reorder Level" tooltip-placement="left">?</span>
+         </div>
+         
+      </form>
+         
+  </div>
+  <div class="modal-footer model-grey-color">
+    <button class="btn btn-success" ng-click="updateEmp()"><i class="glyphicon glyphicon-floppy-save"></i> Update</button>
+    <button class="btn btn-danger" ng-click="modalClose()"><i class="glyphicon glyphicon-remove"></i> Close</button>
+  </div>
+</div>

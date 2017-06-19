@@ -1,0 +1,29 @@
+<div class="clearfix">
+  <div class="modal-header model-grey-color">
+		<button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="modalClose()"><span aria-hidden="true">X</span></button>
+    <h4 class="modal-title">DETAILS OF :   {{Product.product_NAME}}</h4>
+  </div>
+  <div class="modal-body">
+	<dl class="dl-horizontal">
+	  <dt>Product Name</dt>
+	  <dd>{{Product.product_NAME}}</dd>
+	  <dt>Product Description</dt>
+	  <dd>{{Product.product_DESC}}</dd>
+	  <dt>Product Category</dt>
+	  <dd>{{Product.product_CATEGORY}}</dd>
+	  <dt>Supplier ID</dt>
+	  <dd>{{Product.supplier_ID}}</dd>
+	  <dt>Product Quantity</dt>
+	  <dd>{{Product.product_QTY}}</dd>
+	  <dt>Product Note</dt>
+	  <dd>{{Product.note}}</dd>
+	  <dt>Product Size</dt>
+	  <dd>{{Product.product_SIZE}}</dd>
+	  <dt>Product ReoRder Level</dt>
+	  <dd>{{Product.product_REORDER_LEVEL}}</dd>
+	</dl>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-danger" ng-click="modalClose()"><i class="fa fa-close"></i> Close</button>
+  </div>
+</div>
