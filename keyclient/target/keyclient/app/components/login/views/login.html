@@ -1,0 +1,32 @@
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+<div ng-controller="LoginCtrl" class="blog-login-wrapper">
+	<form class="" ng-submit="submit()" ng-controller="LoginCtrl">
+	 
+		<div class="blog-login-error">{{status}}</div>
+		<div class="blog-login-element">User Name:
+			<input type="text" ng-model="username" name="username" required />
+		</div>
+		
+		<div class="blog-login-element">Password:
+			<input type="password" ng-model="password" name="password" required />
+		</div>
+	
+		<div class="blog-login-element">Company:
+			<select>
+			<option>CHIP</option>
+			<option>CHIPINT</option>
+			<option>QATAR</option>
+			</select>
+		</div>
+		
+		<div class="blog-login-button">
+			<button type="submit" class="form-button">Sign in</button>
+		</div>
+		 <div class="blog-login-error">{{error}}</div>
+		
+		
+		
+	</form>
+</div>

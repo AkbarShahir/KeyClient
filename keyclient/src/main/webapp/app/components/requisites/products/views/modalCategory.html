@@ -1,0 +1,66 @@
+<style type="text/css">
+
+.table-striped .selected, .gridview tbody .selected {
+    background-color: #6ccbfb;
+    color: #fff;
+}    
+
+</style>
+<div ng-controller="ModalDemoCtrl" class="table table-striped">
+	 <div class="modal-header">
+            <h3 class="modal-title">Choose Category1</h3>
+        </div>
+  <div class="modal-body">  
+  <table class="table table-striped">    
+  
+  	<div class="form-group">
+            <label class="col-sm-3 control-label">Search <sup class="sup-color"></sup></label>
+
+            <div class="col-sm-8">
+               <input type="text" ng-model="searchText" placeholder="Search Category" class="form-control">
+            </div>
+			
+    </div>
+  
+  		
+	<thead>
+		<tr>
+			<th>Category Name</th>
+			<th>Manufacture</th>
+			<th >Color</th>
+			<th>Size</th>
+		</tr>
+		<!-- <tr>
+			<th colspan="5">
+				<input st-search placeholder="global search" class="input-sm form-control" type="search"/>
+			</th>
+		</tr> -->
+	</thead>
+	<tbody>
+		<tr  ng-repeat="item in categories | filter:searchText">
+			<td><a href="#"  ng-click="$event.preventDefault(); selected.item = item">{{item.CategoryName}}</a></td>
+			<td>{{item.Manufacture}}</td>
+			<td>{{item.Color}}</td>
+			<td>{{item.Size}}</td>
+			
+		</tr>
+	</tbody>
+	
+	</table>
+	   <div class="modal-footer">
+         <!--    <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
+            <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button> -->
+            <button class="btn btn-success" ng-click="ok()"><i class="glyphicon glyphicon-floppy-save"></i>Select</button>
+    <button class="btn btn-danger" ng-click="cancel()"><i class="glyphicon glyphicon-remove"></i> Cancel</button>
+        </div>
+<!-- 	<tfoot>
+		<tr>
+			<td colspan="5" class="text-center">
+				<div st-pagination="" st-items-by-page="itemsByPage"></div>
+			</td>
+		</tr>
+	</tfoot> -->
+You have Chosen <p color: red>{{ selected.item.CategoryName }}	</p>
+</div>
+
+</div>

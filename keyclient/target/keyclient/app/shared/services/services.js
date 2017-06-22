@@ -55,7 +55,7 @@ var app1 = angular.module('appProductServices', ['ngResource']);
 	app.factory('CategoryServices', 
 			function($resource) {
 					return $resource(
-					"http://localhost\\:9999/KeyRestServices/service/ProductServices/categories",{},
+					"http://localhost\\:9999/keyrestservices/services/productservices/categories",{},
 					 {
 						getCategories: 	{method: 'GET', 	cache: false, isArray: true},
 					});
@@ -130,7 +130,7 @@ app.factory('deleteCreds', function($cookies) {
 app.factory('Login1', 
 		function($resource) {
 				return $resource(
-				"http://localhost\\:9999/KeyRestServices/service/LoginServices/Login",{},
+				"http://localhost\\:9999/keyrestservices/services/LoginServices/Login",{},
 				 {
 					login: {method: 'POST', cache: false, isArray: false}
 				});

@@ -1,0 +1,108 @@
+<br>
+<br>
+<br>
+<div class="row">
+  <div class="col-sm-2">
+  
+  <table >
+  <tr><td>Category</td>
+  						<td><select id="bedroom-filter" ng-model="query.product_CATEGORY" >
+                        <option value>All</option>
+                        <option value=Computer>Computer</option>
+                        <option value=periphrals>periphrals</option>
+                        <option value=Catridge>Catridge</option>
+                    </select>
+  </td></tr>
+  
+  <tr><td>Name</td>
+  <td><select id="bedroom-filter" ng-model="query.product_NAME" >
+                        <option value>All</option>
+                        <option value=Fenta>Fenta</option>
+                        <option value=AChu>AChu</option>
+                      
+     </select>
+  </td></tr>
+  
+  
+  <tr><td><button class="btn btn-default"  id="clear-filter" type="button" ng-click="query = {}">Clear Filter</button></td></tr>
+  
+  
+  
+  </table>
+ 
+  </div>
+
+
+<!-- Start -->
+
+<div class="col-sm-10">
+				<div class="container">
+						
+				<div id="main" class="container">
+				  <div class="panel-group">
+				  	<div class="panel panel-primary">
+				   		<div ng-model="source" class="panel-heading">PRODUCT MASTER({{source}})</div>
+				      		<div class="panel-body">		
+				<div ng-show="loading"><h3 bg-color=red>Loading...Please wait</h3></div>
+							
+									<button type="button" class="btn btn-info pull-right" ng-click="addRecord()"><i class="glyphicon glyphicon-plus">
+										</i> Add New Product</button>
+				<table st-table="display_records"  st-safe-src="employees" class="table table-striped">
+							
+					<thead>
+						<tr>
+							<th>Product Name</th>
+							<th st-sort="product_NAME">Product Desc</th>
+							<th>Product Category</th>
+							<th>Action</th>
+						</tr>
+						<tr>
+							<th colspan="5">
+								<input st-search placeholder="global search" class="input-sm form-control" type="search"/>
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+					
+					<tr ng-repeat="row in display_records | filter:query">
+						<!--  <tr st-select-row="row" st-select-mode="multiple" ng-repeat="row in display_records">-->
+							<td>{{row.product_NAME}}</td>
+							<td>{{row.product_DESC}}</td>
+							<td>{{row.product_CATEGORY}}</td>
+							<td>
+								<a type="button" ng-click="viewRecord(row.product_ID)" class="btn btn-sm btn-info">
+									<i class="glyphicon glyphicon-eye-open">
+									</i>
+								</a>
+								
+								
+											<div class="btn-group" role="group" aria-label="...">
+													
+													<button type="button" class="btn btn-default"  ng-click="editRecord(row.product_ID)"><i class="glyphicon glyphicon-pencil">
+													</i></button>
+													<button type="button" class="btn btn-danger" ng-click="deletRecord(row.product_ID)"><i class="glyphicon glyphicon-trash">
+													</i></button>
+											</div>
+							</td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<tr>
+							<td colspan="5" class="text-center">
+								<div st-pagination="" st-items-by-page="itemsByPage"></div>
+							</td>
+						</tr>
+					</tfoot>
+				</table>
+				</div>
+				
+				
+				
+				      		</div>
+				   </div>
+				  </div>
+				</div>
+
+</div>
+<!-- End -->
+</div>

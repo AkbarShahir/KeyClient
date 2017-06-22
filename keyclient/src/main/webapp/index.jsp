@@ -14,10 +14,8 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>  
     <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.2/angular-route.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.4/angular-material.js"></script> 
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-animate.min.js"></script> 
-    
-    
-   		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular-aria.min.js"></script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-animate.min.js"></script>        
+   	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular-aria.min.js"></script> 
    
     
     
@@ -46,13 +44,6 @@
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.1/bootstrap3-typeahead.min.js"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-cookies.min.js"></script>
-
-<script>
-//var app = angular.module("myApp", ["ngTable","ngRoute","ngMaterial","smart-table","ui.bootstrap","ngMessages","material.svgAssetsCache","ngResource","ngDialog","ngAria","appProductServices"]);
-
-
-    
-</script>
 
     
   
@@ -159,7 +150,7 @@
 
   <script src="app/app.module.js"/></script>
   <script src="app/app.route.js"/></script>
- <script src="app/components/products/controllers/productMain.js"/></script>
+ <script src="app/components/requisites/products/controllers/productscontrollers.js"/></script>
    <script src="app/shared/smart-table.js"/></script>
    <script src="app/shared/ui-bootstrap-tpls-2.5.0.js"/></script>
     <script src="assets/js/common.js"/></script>
